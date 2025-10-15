@@ -1,0 +1,32 @@
+# TeamBoard
+
+TeamBoard is a collaborative task management platform designed to help teams stay organized and aligned.  
+It lets users create boards, define tasks, assign responsibilities, and track progress with clarity.  
+Built with a focus on simplicity, transparency, and teamwork, TeamBoard aims to make collaboration feel natural and structured at the same time.
+
+## Tech Stack
+
+- Java 25
+- Spring Boot 3
+
+## Getting Started
+
+To build the application, run the following Maven command:
+```bash
+./mvnw clean package
+```
+
+To start the application, use:
+```bash
+./mvnw spring-boot:run
+```
+
+## Next Steps
+
+TeamBoard is currently in its first development phase. Upcoming goals include:
+
+- Adding persistence with a relational database
+- Defining a clean domain model for boards, lists, and tasks
+- Designing RESTful endpoints for task management
+- Introducing caching and performance optimization with Redis
+- Preparing the foundation for future collaboration features and a simple frontend
