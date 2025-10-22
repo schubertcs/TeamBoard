@@ -8,6 +8,7 @@ Built with a focus on simplicity, transparency, and teamwork, TeamBoard aims to 
 
 - Java 25
 - Spring Boot 3
+- Docker
 
 ## Getting Started
 
@@ -21,11 +22,29 @@ To start the application, use:
 ./mvnw spring-boot:run
 ```
 
+### Docker
+
+Building and running the docker image works with these commands:
+```bash
+docker build -t schubertcs/teamboard:phase1 .
+docker run schubertcs/teamboard:phase1
+```
+
+To debug the image, the following command allows you to start a new container and open a shell on it:
+```bash
+docker run --rm -it --entrypoint sh schubertcs/teamboard:phase1
+# leaving by typing exit
+```
+
+To build a new image and start the whole application stack, so including the database, use:
+```bash
+docker compose up --build
+```
+
 ## Next Steps
 
 TeamBoard is currently in its first development phase. Upcoming goals include:
 
-- Adding persistence with a relational database
 - Defining a clean domain model for boards, lists, and tasks
 - Designing RESTful endpoints for task management
 - Introducing caching and performance optimization with Redis
